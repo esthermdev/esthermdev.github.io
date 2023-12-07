@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+    background-color: whitesmoke;
+    top: 0%;
+}
+
+header .content {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+header .icon {
+    width: 3.125rem;
+}
+
+header .logo {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(84, 80, 80);
+    margin-left: 1.2rem;
+}
+
+header .logo2 {
+    display: none;
+}
+
+header .desktop {
+    margin-left: auto;
+}
+
+header .desktop ul {
+    display: flex;
+}
+
+nav li {
+    list-style-type: none;
+    margin-inline: 0.625rem;
+}
+
+.desktop a {
+    border: 2px solid gray;
+    background-color: white;
+    color: rgb(84, 80, 80);
+    border-radius: 20px;
+    padding: 0.5rem 1.875rem;
+    text-decoration: none;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    header .desktop {
+        display: none;
+    }
+
+    header .icon {
+        width: 4rem;
+        margin-left: auto;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    header .logo-tablet {
+        border: 1px solid red;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: rgb(84, 80, 80);
+        margin-left: 1.2rem;
+        width: 20%;
+    }
+
+    header .mobile {
+        display: flex;
+        margin-left: auto;
+        width: 90%;
+    }
+
+    .mobile ul {
+        display: flex;
+        width: 100%;
+        padding: 0 1.2rem 0 5rem;
+        justify-content: space-between;
+    }
+
+    .mobile .li {
+        margin: 0;
+    }
+
+    .mobile img {
+        width: 3rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header .logo-tablet {
+        display: none;
+    }
+
+    .mobile ul {
+        display: flex;
+        width: 80%;
+        padding: 0;
+        margin: auto;
+    }
+
+    .mobile img {
+        width: 2rem;
+    }
+}
+
+/* Headline */
+
+.banner {
+    display: flex;
+    height: 48rem;
+    background-image: url(../company_homepage/resources/images/landing-page-background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.name-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 25%;
+    left: 10%;
+    width: 500px;
+    height: 150px;
+    background-color: #665687;
+    opacity: 0.9;
+    padding-left: 10px;
+}
+
+#name {
+    color: #FFDDA1;
+    font-size: 3.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .name-box {
+        display: flex;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        justify-content: center;
+        opacity: 1;
+        padding: 0;
+        width: 350px;
+        height: 100px;
+    }
+
+    #name {
+        font-size: 2.2rem;
+    }
+}
+
+/* Greetings */
+
+.greeting {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ffd151;
+    text-align: center;
+    padding: 3.125rem 7rem;
+}
+
+.greeting h2 {
+    font-size: 3rem;
+    color: #d65555;
+    text-decoration: underline;
+}
+
+.greeting p {
+    color: #665687;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .greeting {
+        padding: 3.125rem 4.5rem;
+    }
+
+    .greeting p {
+        font-size: 1.6rem;
+    } 
+}
+
+@media only screen and (max-width: 425px) {
+    .greeting {
+        padding: 3.125rem 3rem;
+    }
+
+    .greeting p {
+        font-size: 1rem;
+    } 
+}
+
+/* Team */
+
+#team-section {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.team-heading {
+    color:#665687;
+    text-decoration: underline;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.profiles-container {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    flex-flow: column;
+    width: auto;
+    padding: 40px 40px;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    height: 300px;
+}
+
+.description {
+    padding: 20px 70px 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 650px) {
+    .team-heading {
+        font-size: 2.5rem;
+    }
+    
+    .profiles-container {
+        flex-flow: column;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .description {
+        padding: 0;
+    }
+}
+
+/* Projects */
+
+#projects-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #d65555;
+    padding: 0 0 3.125rem; /* 50px / 16px = 3.125rem */
+}
+
+.projects-heading {
+    margin: 0;
+    padding: 3.125rem 0; 
+    font-size: 1.875rem; 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffd151;
+}
+
+.projects-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.project {
+    background-color: whitesmoke;
+    width: 18.75rem; 
+    margin: 1.25rem;
+}
+
+.project-image-container {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+}
+
+.project-image-container img {
+    height: 16.25rem; 
+}
+
+.project p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 1.25rem 1.25rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .projects-heading {
+        font-size: 2.5rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #665687;
+    align-items: center;
+}
+
+footer h2 {
+    text-align: center;
+    color: #FFDDA1;
+    text-decoration: underline;
+    font-size: 3rem; /* No change, assuming 3rem is the desired size */
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-icon img {
+    width: 3rem; /* 60px / 16px = 3.75rem */
+    margin: 0 1.25rem; /* 20px / 16px = 1.25rem */
+}
+
+footer p {
+    color: #FFDDA1;
+    margin-top: 3.125rem; /* 50px / 16px = 3.125rem */
+}
+
+@media only screen and (max-width: 770px) {
+    footer p {
+        font-size: 0.8rem;
+        margin: 3.125rem 2rem 1rem;
+    }
+}
