@@ -132,7 +132,7 @@ nav li {
 .banner {
     display: flex;
     height: 48rem;
-    background-image: url(../resources/images/landing-page-background.jpg);
+    background-image: url(./resources/images/landing-page-background.jpg);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
